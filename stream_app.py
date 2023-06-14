@@ -115,11 +115,13 @@ right_column.plotly_chart(fig_product_sales, use_container_width=True)
 # ---- HIDE STREAMLIT STYLE ----
 hide_st_style = """
             <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            header {visibility: hidden;}
+                #MainMenu {visibility: hidden;}
+                footer {visibility: hidden;}
+                header {visibility: hidden;}
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
+
+ 
 
  
