@@ -3,10 +3,10 @@ import plotly.express as px  # pip install plotly-express
 import streamlit as st  # pip install streamlit
 
 # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
-#st.set_page_config(page_title="Simple Sales Dashboard", page_icon=":bar_chart:", layout="wide")
+st.set_page_config(page_title="Simple Sales Dashboard", page_icon=":bar_chart:", layout="wide")
 #st.set_page_config(page_title="Simple Sales Dashboard", 
 #page_icon="https://beaconpowerservices.com/wp-content/uploads/2022/06/BPS-logo-green_BPS-logo-green_favicon_sm.png", layout="wide")
-st.set_page_config(page_title="Simple Sales Dashboard", page_icon="BPS-logo-green_BPS-logo-green_favicon_sm.png", layout="wide")
+#st.set_page_config(page_title="Simple Sales Dashboard", page_icon="BPS-logo-green_BPS-logo-green_favicon_sm.png", layout="wide")
 
 # ---- READ EXCEL ----
 @st.cache_data
