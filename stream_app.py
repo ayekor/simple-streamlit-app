@@ -27,21 +27,47 @@ df = get_data_from_excel()
 
 # ---- SIDEBAR ----
 
-st.sidebar.header("Please Filter Here:")
+
+# Apply custom CSS styling
+st.sidebar.markdown(
+    """
+    <style>
+    .custom-header {
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .custom-label {
+        color: #fff;  
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
+
+# Render the header with custom CSS
+st.sidebar.markdown('<h2 class="custom-header">Please Filter Here:</h2>', unsafe_allow_html=True)
+
+st.sidebar.markdown('<h4 class="custom-label">Select the city:</h4>', unsafe_allow_html=True) 
 city = st.sidebar.multiselect(
-    "Select the City:",
+    "",
     options=df["City"].unique(),
     default=df["City"].unique()
 )
 
+st.sidebar.markdown('<h4 class="custom-label">Select the Customer Type:</h4>', unsafe_allow_html=True) 
 customer_type = st.sidebar.multiselect(
-    "Select the Customer Type:",
+    "",
     options=df["Customer_type"].unique(),
     default=df["Customer_type"].unique(),
 )
 
+st.sidebar.markdown('<h4 class="custom-label">Select the Gender:</h4>', unsafe_allow_html=True) 
 gender = st.sidebar.multiselect(
-    "Select the Gender:",
+    "",
     options=df["Gender"].unique(),
     default=df["Gender"].unique()
 )
