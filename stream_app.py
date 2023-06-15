@@ -26,6 +26,7 @@ def get_data_from_excel():
 df = get_data_from_excel()
 
 # ---- SIDEBAR ----
+
 st.sidebar.header("Please Filter Here:")
 city = st.sidebar.multiselect(
     "Select the City:",
@@ -52,6 +53,8 @@ df_selection = df.query(
 # ---- MAINPAGE ----
 st.title(":bar_chart: Dashboard")
 st.markdown("##")
+
+
 
 # TOP KPI's
 total_sales = int(df_selection["Total"].sum())
